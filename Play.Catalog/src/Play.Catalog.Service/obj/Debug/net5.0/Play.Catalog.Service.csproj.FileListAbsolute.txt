@@ -31,3 +31,14 @@ D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\r
 D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\Play.Catalog.Service.pdb
 D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\Play.Catalog.Service.genruntimeconfig.cache
 D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\ref\Play.Catalog.Service.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\DnsClient.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\MongoDB.Bson.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\MongoDB.Driver.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\SharpCompress.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Snappier.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\ZstdSharp.dll
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+D:\MicroServices Repeat\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
