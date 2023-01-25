@@ -14,23 +14,39 @@ using Microsoft.OpenApi.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Driver;
+using Play.Catalog.Service.Interfaces;
+using Play.Catalog.Service.Repositories;
+using Play.Catalog.Service.Settings;
 
 namespace Play.Catalog.Service
 {
     public class Startup
     {
+        private ServiceSettings _serviceSettings;
+
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
             BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+
+            _serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
+            services.AddSingleton(serviceProvider =>
+            {
+                var mongoDBSettings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                var mongoClient = new MongoClient(mongoDBSettings.ConnectionString);
+                return mongoClient.GetDatabase(_serviceSettings.ServiceName);
+            });
+
+            services.AddSingleton<IItemsRepository, ItemsRepository>();
+
             services.AddControllers();
             services.AddMvc(options => options.SuppressAsyncSuffixInActionNames = false);
             services.AddSwaggerGen(c =>
